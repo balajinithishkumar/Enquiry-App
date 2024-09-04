@@ -22,14 +22,14 @@ console.log(location.pathname)
             SalesRate
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             // to="/vendor-rates"
             className={`text-white  py-2 px-4 rounded transition-colors ${location.pathname == "/vendor-rates" ? "bg-purple-500": "bg-transparent"}`}
           >
             VendorRate
           </Link>
-        </li>
+        </li> */}
       </ul>
       <img src="/logo.png" style={{height:40}} alt="" />
     </nav>
