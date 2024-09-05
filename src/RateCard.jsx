@@ -3,6 +3,7 @@ import axios from "axios";
 import Nav from "./Nav";
 
 const RateCardForm = () => {
+
   const [country, setCountry] = useState("USA"); // Use the sheet name directly
   const [weight, setWeight] = useState("");
   const [weights, setWeights] = useState([]);
@@ -28,6 +29,7 @@ const RateCardForm = () => {
   const fetchData = async () => {
     try {
       // Fetch data from all sheets
+
       const promises = sheets.map((sheet) =>
         axios.get(`${API_ENDPOINT}?sheet=${sheet.name}`)
       );

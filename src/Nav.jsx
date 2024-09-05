@@ -16,10 +16,18 @@ console.log(location.pathname)
         </li>
         <li>
           <Link
-            to="/sale-rates"
+            to="/Sale-rates"
             className={`text-white  py-2 px-4 rounded transition-colors ${location.pathname == "/sale-rates" ? "bg-purple-500": "bg-transparent"}`}
           >
             SalesRate
+          </Link>
+        </li>
+        <li>
+          <Link
+            to="/Payment-confirm"
+            className={`text-white  py-2 px-4 rounded transition-colors ${location.pathname == "/sale-rates" ? "bg-purple-500": "bg-transparent"}`}
+          >
+            Payment Confirm
           </Link>
         </li>
         {/* <li>
