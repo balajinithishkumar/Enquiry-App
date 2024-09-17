@@ -14,23 +14,25 @@ function PaymentConfirmCard({ item, index }) {
       className="flex flex-col border border-gray-300 rounded-lg p-6 bg-white shadow-lg hover:shadow-2xl transition-shadow duration-300"
     >
       <div className="flex flex-col mb-4 gap-2">
-        {item.name && (
+        {item.consignorname && (
           <p className="text-base font-medium text-gray-800">
-            <strong className="text-gray-900">Name:</strong> {item.name}
+            <strong className="text-gray-900">Name:</strong> {item.consignorname}
           </p>
         )}
         <p className="text-base font-medium text-gray-800">
-          <strong className="text-gray-900">Vendor AWB Number:</strong>{" "}
-          {item.vendorAwbnumber || "-"}
+          <strong className="text-gray-900">Shiphit AWB Number:</strong>{" "}
+          {item.awbNumber || "-"}
         </p>
       </div>
       <div className="flex flex-col mb-4 gap-2">
-        {item.phonenumber && (
+        
+        {item.consignorphonenumber && (
           <p className="text-base font-medium text-gray-800">
             <strong className="text-gray-900">Phone Number:</strong>{" "}
-            {item.phonenumber}
+            {item.consignorphonenumber}
           </p>
         )}
+
         {item.destination && (
           <p className="text-base font-medium text-gray-800">
             <strong className="text-gray-900">Destination:</strong>{" "}
@@ -40,24 +42,24 @@ function PaymentConfirmCard({ item, index }) {
       </div>
 
       <div className="flex flex-col mb-4 gap-2">
-        <p className="text-base font-medium text-gray-800">
+        {/* <p className="text-base font-medium text-gray-800">
           <strong className="text-gray-900">Package Connected:</strong>{" "}
           {item.packageConnectedDataTime || "-"}
-        </p>
+        </p> */}
         <p className="text-base font-medium text-gray-800">
           <strong className="text-gray-900">Final Weight:</strong>{" "}
-          {item.actualWeight || "-"}
+          {item.actualWeight + " " + "KG" || "-"}
         </p>
       </div>
 
       <div className="flex flex-col mb-4 gap-2">
         <p className="text-base font-medium text-gray-800">
           <strong className="text-gray-900">PickUp Person Name:</strong>{" "}
-          {item.PickUpPersonName || "-"}
+          {item.pickUpPersonName || "-"}
         </p>
         <p className="text-base font-medium text-gray-800">
           <strong className="text-gray-900">Pickup Completed DateTime:</strong>{" "}
-          {item.PickupCompletedDatetime || "-"}
+          {item.pickupCompletedDatatime || "-"}
         </p>
         {item.rtoIfAny && (
           <p className="text-base font-medium text-red-600">

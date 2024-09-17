@@ -9,6 +9,7 @@ const API_URL = apiURL.SHEETYAPI;
 
 function PaymentConfirmationForm() {
   const { awbnumber } = useParams();
+  console.log(awbnumber)
   const [details, setDetails] = useState(null);
   const [paymentProof, setPaymentProof] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -144,7 +145,7 @@ function PaymentConfirmationForm() {
             <label className="text-gray-700 font-medium mb-1">Phone Number:</label>
             <input
               type="text"
-              value={details.phonenumber}
+              value={details.consignorphonenumber}
               readOnly
               className="p-2 border rounded bg-gray-100"
             />
@@ -153,16 +154,7 @@ function PaymentConfirmationForm() {
             <label className="text-gray-700 font-medium mb-1">Name:</label>
             <input
               type="text"
-              value={details.name}
-              readOnly
-              className="p-2 border rounded bg-gray-100"
-            />
-          </div>
-          <div className="flex flex-col mb-4">
-            <label className="text-gray-700 font-medium mb-1">Email:</label>
-            <input
-              type="email"
-              value={details.email}
+              value={details.consignorname}
               readOnly
               className="p-2 border rounded bg-gray-100"
             />
@@ -180,7 +172,7 @@ function PaymentConfirmationForm() {
             <label className="text-gray-700 font-medium mb-1">Actual Weight:</label>
             <input
               type="text"
-              value={details.actualWeight}
+              value={details.actualWeight +  " " + "KG"}
               readOnly
               className="p-2 border rounded bg-gray-100"
             />
@@ -195,7 +187,7 @@ function PaymentConfirmationForm() {
             />
           </div>
           <div className="flex flex-col mb-4">
-            <label className="text-gray-700 font-medium mb-1">Vendor AWB Number:</label>
+            <label className="text-gray-700 font-medium mb-1">Shiphit AWB Number:</label>
             <input
               type="text"
               value={awbnumber}
@@ -216,7 +208,7 @@ function PaymentConfirmationForm() {
             <label className="text-gray-700 font-medium mb-1">Package Connected:</label>
             <input
               type="text"
-              value={details.packageConnectedDataTime}
+              value={details.pickupCompletedDatatime}
               readOnly
               className="p-2 border rounded bg-gray-100"
             />

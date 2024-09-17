@@ -7,6 +7,7 @@ import PaymentConfirmationForm from './PaymentConfirmationForm';
 import SignIn from "./SignIn";
 import { useEffect, useState } from "react";
 import { auth } from "./firebase";
+import CancelOrReshedule from './CancelOrReshedule';
 
 function App() {
 
@@ -39,6 +40,7 @@ function App() {
           <Route path="/" element={user ? <PickupBooking /> : <Navigate to="/signin" />} />
           {/* Only allow access to other routes if user is logged in */}
           <Route path="/PickupBooking" element={user ? <PickupBooking /> : <Navigate to="/signin" />} />
+          <Route path="/Cancel-reschedule" element={user ? <CancelOrReshedule /> : <Navigate to="/signin" />} />
           <Route path="/Sale-rates" element={user ? <RateCardForm /> : <Navigate to="/signin" />} />
           <Route path="/Vendor-rates" element={user ? <VendorRateCard /> : <Navigate to="/signin" />} />
           <Route path="/Payment-confirm" element={user ? <PaymentConfirm /> : <Navigate to="/signin" />} />

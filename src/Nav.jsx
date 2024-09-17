@@ -55,6 +55,19 @@ function Nav() {
               Payment Confirm
             </Link>
           </li>
+          <li>
+            <Link
+              to="/Cancel-reschedule"
+              className={`text-white  rounded transition-colors ${
+                location.pathname === "/Cancel-reschedule"
+                  ? "text-purple-900 font-semibold"
+                  : "bg-transparent"
+              }`}
+              style={{ minHeight: "40px" }} // Ensures a fixed height
+            >
+              Cancel - Reschedule
+            </Link>
+          </li>
         </ul>
       </div>
       <div className="flex gap-6 items-center ">
